@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+div {
+    height: 500px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box1 {
+    animation: box;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+
+}
+
+.box2 {
+    animation: box;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+
+}
+
+.box3 {
+    animation: box;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+
+}
+
+.box4 {
+    animation: box;
+    animation-duration: 250ms;
+    animation-iteration-count: infinite;
+
+}
+
+.box5 {
+    animation: box;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes box {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: black;
+        color: white;
+
+    }
+
+    100% {
+        background-color: white;
+    }
+
+}

@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: grey;
+}
+
+img {
+    border: 5px solid white;
+    animation: img;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-play-state: paused;
+
+}
+
+/* div>div {
+    height: 500px;
+    height: 500px;
+    filter: blur(50px);
+    z-index: 0;
+    position: absolute;
+    background-color: ;
+} */
+
+img:hover {
+    animation-play-state: running;
+}
+
+@keyframes img {
+    0% {
+        box-shadow: 0px 0px 50px white;
+    }
+
+    25% {
+        box-shadow: 0px 0px 50px 50px violet;
+    }
+
+    50% {
+        box-shadow: -20px -20px 50px lightblue, 20px 20px 50px pink;
+
+
+    }
+
+    75% {
+        box-shadow: -20px -20px 50px pink, 20px 20px 50px blue;
+
+
+    }
+
+    100% {
+        box-shadow: 0px 0px 50px white;
+
+
+    }
+}

@@ -1,0 +1,200 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+/* =================================================================
+!                       Transform
+================================================================= */
+
+
+
+.transform1 {
+    /* beachte translate klein die achse Groß (X,Y,Z) */
+    transform: translateX(200px);
+}
+
+/* .transform2 {
+    So wird das erste Transform vom 2. überschrieben
+    transform: translateY(500px);
+    transform: translateX(200px);
+} */
+
+.transform2 {
+    /* Möglichkeit 1 */
+    transform: translateY(100px) translateX(200px);
+    /* Möglichkeit 2 (Shorthand) */
+    /* transform: translate (x,y,z) */
+    transform: translate(200px, 50px);
+}
+
+.transform3 {
+    /* Bei Prozenten wird immer mit der Containerbreite gerechnet (Transformiert */
+    transform: translatex(200%)
+}
+
+
+.transform4 {
+    margin-left: 150px;
+    transform: skewX(150deg);
+    transform: skewY(150deg);
+    /* Shorthnd skew(x,y) */
+}
+
+
+.transform5 {
+    margin-left: 100px;
+    transform: rotateX(45deg);
+}
+
+
+/* =================================================================
+!                       Transition
+================================================================= */
+
+.transition1 {
+    /* hier wird ausgewählt wodrauf die transition angewendet werden seln */
+    transition-property: width;
+    /* hier kann die länge der transistion aus gewählt werden */
+    transition-duration: 2s;
+    /* geschwindkeit  */
+    transition-timing-function: linear;
+    ;
+}
+
+.transition1:hover {
+    width: 300px;
+}
+
+.transition2 {
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    /* transition-delay: 3s; */
+
+}
+
+.transition2:hover {
+    width: 300px;
+}
+
+.transition3 {
+    /* Shorthand transition: property duration timing delay */
+    transition: width 2s ease-in;
+
+}
+
+.transition3:hover {
+    width: 600px;
+}
+
+.transition4 {
+    transition: width 2s ease-in;
+}
+
+.transition4:hover {
+    width: 600px;
+}
+
+.transition5 {
+    /* transition: all 2s ease-out; */
+    transition:
+        width 2s ease-out,
+        background-color 2s ease-out;
+}
+
+.transition5:hover {
+    width: 300px;
+    /* background-color: aqua; */
+    animation: color;
+    animation-duration: 10s;
+}
+
+
+@keyframes color {
+    0% {
+        background-color: aqua;
+    }
+
+    /* 25% {
+        background-color: violet;
+    } */
+
+    50% {
+        background-color: blueviolet;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+
+/* =================================================================
+!                       Animation
+================================================================= */
+
+
+.animation {
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    /* Anmitaion Name btw Identifier für die Keyframes */
+    animation-name: square;
+    /* wie lange soll die Animation sein */
+    animation-duration: 8s;
+    /* wie oft soll die animation laufen */
+    /* animation-iteration-count: 1; */
+    /* Animation Geschwindigkeit*/
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    ;
+}
+
+.animation:hover {
+    animation-play-state: running;
+}
+
+.animation:not(:hover) {
+    animation: reset;
+}
+
+@keyframes square {
+    0% {
+        border-radius: 0px;
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        border-radius: 50%;
+        transform: translate(400px, 0px);
+
+    }
+
+    50% {
+        border-radius: 50%;
+        transform: translate(400px, 400px);
+
+    }
+
+    75% {
+        border-radius: 50%;
+        transform: translate(0px, 400px);
+
+    }
+
+    100% {
+        border-radius: 20%;
+        transform: translate(0px, 0px);
+
+    }
+}

@@ -1,0 +1,42 @@
+section {
+    position: relative;
+    width: 100vw;
+    background-color: grey;
+    height: 200px;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    transition: all 2s ease-in;
+    position: absolute;
+}
+
+.box1 {
+    left: 0%;
+    top: 0%;
+    background-color: red;
+    position: absolute;
+}
+
+.box2 {
+    position: absolute;
+    left: 0%;
+    top: 100px;
+    background-color: green;
+
+}
+
+
+section:hover .box1 {
+    left: 90%;
+    top: 0%;
+    transition: all 3s ease 0;
+}
+
+section:hover .box2 {
+    left: 90%;
+    top: 100px;
+    /* transform: translateX(90%); */
+    transition: all 2s ease 1s;
+}

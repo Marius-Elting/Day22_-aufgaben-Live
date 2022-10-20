@@ -1,0 +1,20 @@
+div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: 1s linear;
+    border-radius: 20px;
+}
+
+section {
+    height: 1000px;
+    width: 1000px;
+}
+
+section:hover div {
+    width: 400px;
+    height: 400px;
+    transform: rotate(180deg) translateY(-100%);
+    transition: 1s linear;
+
+}

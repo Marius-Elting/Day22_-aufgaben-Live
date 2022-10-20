@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+section {
+    display: flex;
+    gap: 20px;
+}
+
+div {
+    height: 30px;
+    width: 30px;
+}
+
+.box1 {
+    background-color: green;
+    animation: box;
+    animation-duration: 0.7s;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box2 {
+    background-color: purple;
+    animation: box;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box3 {
+    background-color: yellow;
+    animation: box;
+    animation-duration: 0.7s;
+    animation-delay: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box4 {
+    background-color: red;
+    animation: box;
+    animation-duration: 0.7s;
+    animation-delay: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box5 {
+    background-color: blueviolet;
+    animation: box;
+    animation-duration: 0.7s;
+    animation-delay: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes box {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}

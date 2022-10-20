@@ -1,0 +1,55 @@
+section {
+    position: relative;
+    width: 100vw;
+    background-color: grey;
+    height: 200px;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    transition: all 2s ease-in;
+    position: absolute;
+}
+
+a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.kreis1 {
+    height: 200px;
+    width: 200px;
+    left: 0%;
+    bottom: 0%;
+    background-color: red;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 0;
+
+}
+
+.kreis2 {
+    position: absolute;
+    left: 400px;
+    bottom: 0px;
+    background-color: green;
+    border-radius: 100%;
+    z-index: 0;
+
+}
+
+
+section a:active~.kreis1 {
+    left: 250px;
+    transition: all 3s linear 0;
+}
+
+section a:active~.kreis2 {
+    left: 90%;
+    /* transform: translateX(90%); */
+    transition: all 3s ease 1.8s;
+}
