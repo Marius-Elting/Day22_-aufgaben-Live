@@ -4,17 +4,22 @@ div {
     background-color: red;
     transition: 1s linear;
     border-radius: 20px;
+    /* transform-origin: bottom left; */
+
 }
 
 section {
     height: 1000px;
     width: 1000px;
+    display: flex;
+    justify-content: center;
+    ;
 }
 
 section:hover div {
-    width: 400px;
-    height: 400px;
-    transform: rotate(180deg) translateY(-100%);
+
+    transform-origin: bottom left;
+    transform: rotate(90deg) scale(2);
     transition: 1s linear;
 
 }
